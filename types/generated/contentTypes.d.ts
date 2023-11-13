@@ -368,6 +368,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     singularName: 'article';
     pluralName: 'articles';
     displayName: 'Article';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -375,6 +376,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
   attributes: {
     Title: Attribute.String & Attribute.Required & Attribute.Unique;
     content: Attribute.Blocks;
+    image: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
